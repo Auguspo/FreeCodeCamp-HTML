@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <nav id="navbar">
+        <header><strong><u>Cow Documents</u></strong></header>
+        <ul> <a class="nav-link" href="#Introduction">Introduction</a><br>
+          <a class="nav-link" href="#Source">Source</a><br>
+          <a class="nav-link" href="#Commands">Commands</a><br>
+          <a class="nav-link" href="#Sample_Code">Sample Code</a><br>
+          <a class="nav-link" href="#History">History</a><br>
+        </ul>
+      </nav>
+      <img src="https://bigzaphod.github.io/COW/cowprogramming-logo.png" class="responsive" alt="error">
+    
+      <main id="main-doc">
+        <section class="main-section" id="Introduction">
+          <header><strong>Introduction</strong></header>
+          <article>
+            <p>The COW programming language was designed with the bovine in mind. Given that cows have somewhat limited vocabulary skills, it seemed natural to incorporate only the words they know into the language. As a result, all instructions are some variation on "moo" which just so happens to be the only word they really understand.
+            </p>
+            <p>Any other word or symbol that isn't an instruction is ignored entirely. So, spaces can be used or not. Newlines can be used or not. You get the idea. It makes commenting COW programs rather easy as long as you don't use any words that have an instruction embedded in it. All instructions are case-sensitive.
+            </p>
+          </article>
+        </section>
+    
+        <section class="main-section" id="Source">
+          <header><strong>Source</strong></header>
+          <article>
+            <p>Now that you're all pumped up to get your neighborhood cows in on the action, you can download and compile the C++ interpreter source or my new compiler that generates a C++ version of the COW source. Enjoy!
+    
+            </p>
+            <p>Forget how many bottles of beer you had on the wall? Slarty has contributed a program to help. Enjoy.
+            </p>
+          </article>
+        </section>
+        <section class="main-section" id="Commands">
+          <header><strong>Commands</strong></header>
+          <article>
+            <p>The commands are as follows:
+            </p>
+            <p>
+            </p>
+            <code></code>
+            <li>moo: This command is connected to the MOO command. When encountered during normal execution, it searches the program code in reverse looking for a matching MOO command and begins executing again starting from the found MOO command. When searching, it skips the instruction that is immediately before it (see MOO).</li>
+            <li>mOo: Moves current memory position back one block.</li>
+            <li>moO: Moves current memory position forward one block.</li>
+            <li>mOO: Execute value in current memory block as if it were an instruction. The command executed is based on the instruction code value (for example, if the current memory block contains a 2, then the moO command is executed). An invalid command exits the running program. Value 3 is invalid as it would cause an infinite loop.</li>
+            <li>Moo: If current memory block has a 0 in it, read a single ASCII character from STDIN and store it in the current memory block. If the current memory block is not 0, then print the ASCII character that corresponds to the value in the current memory block to STDOUT.</li>
+            <li>MOo: Decrement current memory block value by 1.</li>
+            <li>MoO: Increment current memory block value by 1.</li>
+            <li>MOO: If current memory block value is 0, skip next command and resume execution after the next matching moo command. If current memory block value is not 0, then continue with next command. Note that the fact that it skips the command immediately following it has interesting ramifications for where the matching moo command really is. For example, the following will match the second and not the first moo: OOO MOO moo moo</li>
+            <li>OOO: Set current memory block value to 0.</li>
+            <li>MMM: If no current value in register, copy current memory block value. If there is a value in the register, then paste that value into the current memory block and clear the register.</li>
+            <li>oom: Read an integer from STDIN and put it into the current memory block.</li>
+            <li>OOM: Print value of current memory block to STDOUT as an integer.</li>
+    
+          </article>
+        </section><br>
+    
+        <section class="main-section" id="Sample_Code">
+          <header><strong>Sample Code</strong></header>
+          <article>
+            <p>
+            <p></p>
+            </p>
+            <li>quick exit</li>
+            <code>OOO<br></code> <code>MOo<br></code> <code>mOO<br></code>
+            <li>simple loop using current memory block as a counter</li>
+            <code> MOO</code><br><code>MOo</code><br><code>[[ anything in here happens "current" number of times ]]</code><br><code>moo</code>
+            <li>copy current value to next memory block</li><code>MMM</code><br><code>
+              moO<br></code><code>
+              MMM<br></code>
+    
+          </article><br>
+        </section>
+        <section class="main-section" id="History">
+          <header><strong>History</strong></header>
+          <article>
+            <p>
+            </p>
+            <li>Although I don't quite remember for sure, I believe COW was released sometime in early 2003.</li>
+            <p>
+            </p>
+            <pre>
+                                           /;    ;\
+                                       __  \\____//
+                                      /{_\_/   `'\____
+                                      \___  (o)  (o  }
+           _____________________________/         :--'   
+       ,-,'`@@@@@@@@        @@@@@@         \_     `__\
+      ;:(  @@@@@@@@@         @@@              \___(o'o)
+      :: )  @@@@           @@@@@@        ,'@@(  `===='    Moo!
+      :: : @@@@@:           @@@@         `@@@:
+      :: \  @@@@@:        @@@@@@@)    (  '@@@'
+      ;; /\      /`,    @@@@@@@@@\    :@@@@@)
+      ::/  )    {_----------------:  :~`,~~;
+     ;;'`; :   )                   :  / `; ;
+    ;;;; : :   ;                   :  ;  ; :
+    `'`' / :  :                    :  :  : :
+        )_ \__;      ";"           :_ ;  \_\        `,','
+        :__\  \    * `,'*          \  \  :  \   *   8`;'*  *
+     ` ` `  `^' ` ` \ :/ ` ` ` ` `  `^'  `-^-' ` \v/ `:  \/
+    
+            </pre><code></code>
+    
+          </article>
+        </section>
+      </main>
+    </body>
+    
+</body>
+</html>

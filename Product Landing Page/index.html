@@ -1,0 +1,108 @@
+<html>
+
+<head>
+    <style>
+        #header-img {
+
+            display: flex;
+            margin: auto;
+            top: 0;
+            width: 150px;
+        }
+
+        body {
+            font-family: sans-serif;
+            
+        }
+
+        header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background-color: #7bebe5;
+            color: white;
+            font-family: 'Exo 2', sans-serif;
+            padding: 1em;
+            text-align: center;
+        }
+
+        .nav-link {
+            padding: 20px;
+            margin: 20px;
+            text-align: center;
+        }
+
+        section {
+
+            padding-top: 50px;
+            padding-bottom: 50px;
+            text-align: center;
+
+        }
+
+        .flex-container>div {
+            background-color: white;
+            width: 200px;
+            text-align: center;
+            display: inline-block;
+            line-height: 40px;
+            font-size: 14px;
+        }
+
+
+        @media only screen and (max-width: 768px) {
+
+            /* For mobile phones: */
+            [class*="col-"] {
+                width: 100%;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <header id="header">
+        <img id="header-img" src="https://upload.wikimedia.org/wikipedia/commons/a/a7/Tp-Link_logo_2016.png"
+            alt="error">
+        <nav id="nav-bar">
+            <a class="nav-link" href="#learn-more">Learn more</a>
+            <a class="nav-link" href="#request-coupon">Request coupon</a>
+            <a class="nav-link" href="#buy-on-amazon">Buy</a>
+        </nav>
+    </header>
+
+    <section id="learn-more">
+        <h1 id="header">Product Landing Page</h1>
+        <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/rZicCHWuEhs"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+    </section>
+
+    <section id="request-coupon">
+        <h2>Request the coupon</h2>
+        <form id="form" action="https://www.freecodecamp.com/email-submit">
+            <input type="email" id="email" placeholder="Email" name="email"></input>
+            <input id="submit" type="submit"></input>
+        </form>
+    </section>
+
+    <section id="buy-on-amazon">
+        <div class="flex-container">
+            <div><a
+                    href="https://www.mercadolibre.com.ar/repetidor-tp-link-tl-wa850re-blanco-220v/p/MLA6186903?pdp_filters=category:MLA1700#searchVariation=MLA6186903&position=1&search_layout=grid&type=product&tracking_id=f6e69980-ee74-4dec-ba0c-f34c8a6b7530">Buy
+                    on Mercado Libre.</a></div>
+            <div><a
+                    href="https://www.amazon.com/TP-Link-AC1750-Enrutador-inteligente-Internet/dp/B079JD7F7G?ref_=ast_sto_dp&th=1&psc=1">Buy
+                    on Amazon.</a></div>
+            <div><a href="https://www.tp-link.com/ar/where-to-buy/#VENTA%20POR%20INTERNET">Online Stores</a></div>
+        </div>
+    </section>
+
+
+</body>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+</html>

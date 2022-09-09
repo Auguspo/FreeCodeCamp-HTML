@@ -1,0 +1,80 @@
+<html lang="en">
+
+<head>
+    <style>
+main{text-align: center;}
+        body {
+            font-family: sans-serif;
+            padding-left: 10%;
+            padding-right: 20%;
+            margin-left: 20px;
+            margin-right: 20px;
+            max-width:350px;
+            margin: 0 auto;}
+
+        label {
+            font-size: 18px;
+            display: block;
+            padding-bottom: 10px;
+
+        }
+
+        input {
+
+            display: inline-block;
+            
+        }
+
+        form {
+            background-color: #CC0000;
+            padding: 40px 40px 40px 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="title">Tell Me About Movies</h1>
+    <p id="description">This is a survey where you can tell us the movies you like.</p>
+    <form id="survey-form">
+        <!-- Fields -->
+        <label id="name-label"> Name: </label><input type="text" name="name" id="name" placeholder="Name"
+            required></input><br>
+        <label id="email-label"> Email: </label><input type="email" name="email" id="email" placeholder="Email"
+            required></input><br>
+        <label id="number-label"> Number: </label><input type="number" name="number" placeholder="Number" id="number"
+            min="0" max="10"></input><br>
+
+        <!-- Options -->
+        <br>
+        <label for="cars">Choose a genre:</label>
+        <select id="dropdown" name="cars">
+            <option value="Action">Action</option>
+            <option value="Horror">Horror</option>
+            <option value="Drama">Drama</option>
+            <option value="Thriller">Thriller</option>
+        </select><br><br>
+        <!-- Radiobuttons -->
+
+        <input type="radio" id="gender" name="gender" value="Male">Male
+        <input type="radio" id="gender" name="gender" value="FemaleS">Female
+        <input type="radio" id="gender" name="gender" value="Other">Other<br><br>
+
+
+
+
+
+        <!-- Checkbox -->
+        <label>Do you watch it with:</label>
+        <input type="checkbox" id="companion" name="Friend" value="Friend">Friend
+        <input type="checkbox" id="companion" name="Family" value="Family">Family
+        <input type="checkbox" id="companion" name="Other/Alone" value="Other/Alone">Other/Alone<br><br>
+
+        <!-- TEXT AREA -->
+        <textarea type="textarea" placeholder="Additional comments"></textarea><br>
+
+        <input id="submit" type="submit">
+    </form>
+</body>
+
+</html>
